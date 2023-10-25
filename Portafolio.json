@@ -1,0 +1,59 @@
+[
+    {
+        "nombre": "Libro de Cuentos Zen",
+        "fotos": ["https://raw.githubusercontent.com/MjoseGaete/DNM_clase12/main/img/Cuentos%20zen%201.jpg", "https://raw.githubusercontent.com/MjoseGaete/DNM_clase12/main/img/Cuentos%20zen%202.webp", "https://raw.githubusercontent.com/MjoseGaete/DNM_clase12/main/img/Cuentos%20zen%203.webp"],
+        "soporte": "editorial",
+        "abstract": "Edición y encuadernación con un concepto central",
+        "texto": "Utilizando el concepto ilusión, se diseña una nueva edición de un libro de cuentos Zen pensada en encuadernación japonesa. Contiene ilustraciones desarrolladas en formato scanimation y cuenta con un sobre en la cubierta para resguardar la lámina de acetato que permite la visualización de la ilusión de movimiento creada con las ilustraciones."
+    },
+    {
+        "nombre": "Capitán Pastene: Conoce la pequeña Italia",
+        "fotos": ["https://raw.githubusercontent.com/MjoseGaete/DNM_clase12/main/img/CP1.jpg", "https://raw.githubusercontent.com/MjoseGaete/DNM_clase12/main/img/CP2.webp", "https://raw.githubusercontent.com/MjoseGaete/DNM_clase12/main/img/CP3.jpg"],
+        "soporte": "servicio",
+        "abstract": "Servicio de turismo inmersivo en Capitán Pastene",
+        "texto": "Considerando la situación de Capitán Pastene y buscando resaltar e incentivar la compra de su producto de origen, prosciutto, se diseña un servicio de turismo en la zona, que transporte al usuario por la historia del lugar y los sitios más icónicos, permitiéndoles conseguir sellos en un pasaporte de viaje, que les permitirán obtener una fotografía de época para recordar la experiencia, la cual cuenta con un espacio de guardado en el mismo pasaporte. El servicio de turismo, también considera una actividad de cocina, que permita crear una mayor cercanía con las trattorías, ayude a resaltar el prosciutto y facilite la venta del producto estrella del lugar."
+    },
+    {
+        "nombre": "Identidad Gráfica: Aguas Maule",
+        "fotos": ["https://raw.githubusercontent.com/MjoseGaete/DNM_clase12/main/img/Idam1.jpg", "https://raw.githubusercontent.com/MjoseGaete/DNM_clase12/main/img/Idam.webp", "https://raw.githubusercontent.com/MjoseGaete/DNM_clase12/main/img/Idam2.jpg"],
+        "soporte": "gráfico",
+        "abstract": "Raport de patrón, ilustraciones y sello temáticos Aguas Maule",
+        "texto": "Pensando en el desarrollo de un servicio, se desarrolla una identidad gráfica para este, creando motivos que se puedan utilizar en circunstancias diversas, como anuncios publicitarios, como envoltorios para la venta y recuerdos de la zona, que puedan motivar a turistas a acercarse al sitio web de Aguas Maule, para aprender sobre la reutilización del algua y el turismo ecológico que pueden realizar en la zona."
+    },
+    {
+        "nombre": "Aguas Maule",
+        "fotos": ["https://raw.githubusercontent.com/MjoseGaete/DNM_clase12/main/img/AM1.jpg", "https://raw.githubusercontent.com/MjoseGaete/DNM_clase12/main/img/AM2.webp", "https://raw.githubusercontent.com/MjoseGaete/DNM_clase12/main/img/AM3.webp"],
+        "soporte": "servicio",
+        "abstract": "Proyecto Aguas Maule, para la concientización y cuidado del agua",
+        "texto": "Siendo Presentados con una situación crítica respecto al agua en la región del Maule, se presenta Aguas Maule como un sitio web que facilite el acceso a la información respecto a la reutilización de aguas grises, el cuidado del agua y la captación de aguas lluvia. Considerando la población de edad avanzada, se considera el acceso desde la página a imprimibles que puedan ser entregados a aquellas personas que cuenten con interés en la materialización de ciertos proyectos en su hogar. Además se cuenta con una sección de turismo, que informe a la población flotante del sector sobre el turismo sustentable y como cuidar el agua durante su estancia en el Maule, además de motivarlo a llevar los conocimientos adquiridos a sus hogares, para ponerlos en práctica."
+    },
+    {
+        "nombre": "Manual Simplificado de Armado Producto",
+        "fotos": ["https://picsum.photos/id/100/500/310", "https://picsum.photos/id/42/500/310", "https://picsum.photos/id/120/500/310"],
+        "soporte": "editorial",
+        "abstract": "Booklet de instrucciones gráficas para el armado de un producto diseñado en cartón reciclado",
+        "texto": "Luego de desarrollar un asiento reparable y consciente con el medio ambiente, se diseña un manual de armado que represente de forma simple los materiales a utilizar, las piezas de construcción y las instrucciones a seguir para un armado correcto y duradero del producto, además de explicar metodos de reparación, para asegurarse de que este no sea desechado en caso de romper o perder una pieza."
+    },
+    {
+        "nombre": "Actividades Sobre Reciclaje para Niños",
+        "fotos": ["https://picsum.photos/id/345/500/310", "https://picsum.photos/id/273/500/310", "https://picsum.photos/id/435/500/310"],
+        "soporte": "servicio",
+        "abstract": "Sistema de concientización y aprendizaje sobre el reciclaje",
+        "texto": "En conjunto con el Ecoparque de Peñalolén, se derarrolla una actividad didáctica que ayude a los monitores a mantener a los niños interesados sobre el compostaje, permitiendo enseñarles tanto el impacto generado por la basura y como esta puede ser reducida gracias al compost, como enseñarles la forma de realizar este correctamente en sus casas, aprendiendo los elementos que pertenecen al compost con un pequeño juego; ludificando su aprendizaje. Este juego cuenta además con el nombre de los elemtos en braille y fue testeado sobre el contraste, para garantizar que personas con diferentes discapacidades visuales, puedan usarlo con simpleza. Se piensa además que el material sea fácil de limpiar y desinfectar para el ambiente educativo."
+    },
+    {
+        "nombre": "Infografía Material: Alginato",
+        "fotos": ["https://picsum.photos/id/240/500/310", "https://picsum.photos/id/203/500/310", "https://picsum.photos/id/370/500/310"],
+        "soporte": "gráfico",
+        "abstract": "Infografía sobre las propiedades y funcionamiento del alginato",
+        "texto": "Se diseña una Infografía sobre un material utilizado en el diseño, el alginato, se busca que de forma simple se pueda entender de dónde proviene, los formatos en los que se puede encontar y los usos que tiene en diversas industrias, mostrando la ventaja de su versatilidad e importancia en diferentes ámbitos. Se presenta además sus usos para el desarrollo de biomateriales, destacando tres áreas en las que se destaca como material."
+    },
+    {
+        "nombre": "Receta sin Palabras: Tiramisú",
+        "fotos": ["https://picsum.photos/id/816/500/310", "https://picsum.photos/id/253/500/310", "https://picsum.photos/id/789/500/310"],
+        "soporte": "gráfico",
+        "abstract": "Desarrollo de una receta conocida, únicamente de forma gráfica",
+        "texto": "Se diseña una receta de Tiramisú apelando a la experiencia chilena para el reconocimiento de ciertos insumos. Se entrega una vista en explosión del postre, para ayudar al usuario a comprender como se compone, las instruciónes son gráficas, con iconografía simple para asegurar su comprnsión y el desarrollo del plato."
+    }
+
+]
