@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <!--En la siguiente línea voy por el estilo CSS que ofrece Bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    </head>
+        <!--estilo CSS al que puede conmplementar o contradecir-->
+        <style>
+            section {
+                scroll-margin-top: 50px;
+            }
+            nav {
+                backdrop-filter: blur(0.5rem);
+            }
+            #foto {
+                background: transparent url("https://picsum.photos/id/501/800/600?blur=8") 0 0 no-repeat;
+                background-size: cover;
+            }
+            footer{
+                background: #A67788;
+            }
+        </style>
+        <title>María José Gaete</title>
+    </head>
+    <body>
+        <!--Barra de navegación fija al tope-->
+        <nav class="navbar fixed-top navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">María José Gaete</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#lasEspecialidades">Especialidades</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#losTrabajos">Trabajos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#lasOpiniones">Opiniones</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#losContactos">Contactos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--Encabezado-->        
+        <header class="vh-100" id="foto">
+            <div class="position-absolute top-50 start-50 translate-middle w-50">
+                <p class="fs-4">
+                    El diseño entrega la posibilidad de cambiar nuestra realidad, trabajando de forma consiente, creando un mundo que no sólo sea estéticamente agradable, pero que ayude al desarrollo pleno detodas las personas posibles. En la práctica, me he <a href="#lasEspecialidades" class="link-dark">especializada en diseño de servicio, editorial y gráfico</a>.
+                </p>
+            </div>
+        </header>
+        <!--Los símbolos en este SVG escondido serán reutilizados más abajo-->
+         <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <symbol id="person" viewBox="0 0 16 16">
+                <path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm.256 7a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Zm3.63-4.54c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382l.045-.148ZM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z"/>
+            </symbol>
+            <symbol id="book" viewBox="0 0 16 16">
+                <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+            </symbol>
+            <symbol id="pen" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M10.646.646a.5.5 0 0 1 .708 0l4 4a.5.5 0 0 1 0 .708l-1.902 1.902-.829 3.313a1.5 1.5 0 0 1-1.024 1.073L1.254 14.746 4.358 4.4A1.5 1.5 0 0 1 5.43 3.377l3.313-.828L10.646.646zm-1.8 2.908-3.173.793a.5.5 0 0 0-.358.342l-2.57 8.565 8.567-2.57a.5.5 0 0 0 .34-.357l.794-3.174-3.6-3.6z"/>
+                <path fill-rule="evenodd" d="M2.832 13.228 8 9a1 1 0 1 0-1-1l-4.228 5.168-.026.086.086-.026z"/>
+            </symbol>
+        </svg>
+        <!--Sección de #lasEspecialidades-->        
+        <section class="bg-light" id="lasEspecialidades">
+            <div class="container py-5">
+                <div class="row gx-5">
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h2 class="h4 fw-bolder">
+                            <svg class="me-1 mb-1" width="1.5em" height="1.5em" fill="#00a3a8"><use href="#person"></use></svg> Servicio/UX
+                        </h2>
+                        <p>Diseño de servicios y experiencias pensados en el usuario que permitan potenciar el reconocimiento y utilidad percibida de la marca.</p>
+                        <small>#Servicio</small>
+                    </div>
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h2 class="h4 fw-bolder">
+                            <svg class="me-1 mb-1" width="1.5em" height="1.5em" fill="#00a3a8"><use href="#book"></use></svg> Editorial
+                        </h2>
+                        <p>Creación de piezas editoriales alrededor de conceptos interactivos, que permitan involucrar al usuario de una forma profunda con el escrito.</p>
+                        <small>#Editorial</small>
+                    </div>
+                    <div class="col-lg-4">
+                        <h2 class="h4 fw-bolder">
+                            <svg class="me-1 mb-1" width="1.5em" height="1.5em" fill="#00a3a8"><use href="#pen"></use></svg> Gráfico
+                        </h2>
+                        <p>Diseño de material gráfico para marcas, patrones temáticos variados, stickers promocionales y material informativo.</p>
+                        <small>#Gráfico</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Sección de #losTrabajos-->        
+        <section class="border-top border-bottom" id="losTrabajos">
+            <div class="container py-5">
+                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" id="trabajos"></div>
+                <!-- Ejemplo de un botón para abrir el modal -->
+                    <div class="modal fade" id="ModalTrabajos" tabindex="-1" aria-labelledby="Trabajos" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                            <h5 class="modal-title" id="Trabajos">¿En qué consiste?</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                         <div class="modal-body">
+                            <!-- Aquí se mostrarán los detalles del trabajo -->
+                            <div id="ExpansionTrabajos">
+                                <!-- Los detalles del trabajo se llenarán con JavaScript -->
+                                </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </section>
+        <!--Sección de #lasOpiniones-->        
+        <section class="bg-light" id="lasOpiniones">
+            <div class="container py-5">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bolder">Opiniones</h2>
+                    <p class="lead mb-0">Algunos clientes felices</p>
+                </div>
+                <div class="row">
+                    <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 mx-auto">
+                        <!-- Primer comentario-->
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-body p-4">
+                                <p class="mb-1">😁 Se preocupa mucho por entregar el mejor trabajo posible.</p>
+                                <div class="small text-muted text-end">— Hernán</div>
+                            </div>
+                        </div>
+                        <!-- Segundo comentario-->
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-body p-4">
+                                <p class="mb-1">🤯 Al principio no estabamos muy seguros de a dónde llegaría el proyecto, pero supo exactamente lo que necesitábamos.</p>
+                                <div class="small text-muted text-end">— Cristina</div>
+                            </div>
+                        </div>
+                        <!-- Tercer comentario-->
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-body p-4">
+                                <p class="mb-1">😌 Se preocupó de la accesibilidad del proyecto desde el día 1.</p>
+                                <div class="small text-muted text-end">— María Fernanda</div>
+                            </div>
+                        </div>
+                        <!-- Listo, no más comentarios-->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Sección de #losContactos-->        
+        <section class="border-top border-bottom" id="losContactos">
+            <div class="container py-5">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bolder">Contactos</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body text-center">                        
+                                <h3 class="m-0 fs-5"><span class="fs-1">📍</span><br/>Dirección</h4>
+                                <div class="small text-black-50">4923 Market Street, Orlando FL</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body text-center">
+                                <h3 class="m-0 fs-5"><span class="fs-1">📧</span><br/>Email</h4>
+                                <div class="small text-black-50"><a href="#!">hello@yourdomain.com</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body text-center">
+                                <h3 class="m-0 fs-5"><span class="fs-1">📱</span><br/>Teléfono</h4>
+                                <div class="small text-black-50">+56 9 5555 5555</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- El pie de página-->
+        <footer class="py-4 text-white">
+            <div class="container px-5"><p class="text-center small">María José Gaete &copy; 2023</p></div>
+        </footer>
+        <!-- Lo que sigue es JavaScript a secas-->
+        <script>
+  async function portfolio() {
+    const consulta = await fetch("https://raw.githubusercontent.com/MjoseGaete/DNM_clase12/main/Portafolio.json");
+    const data = await consulta.json();
+    var donde = document.querySelector("#trabajos");
+
+    data.forEach(function (t, i) {
+      // Agrega un enlace que utiliza Bootstrap para abrir el modal al hacer clic en el nombre del trabajo
+      donde.innerHTML += `<article class="col"><div class="card h-100 shadow-sm ${t.soporte}">
+          <img src="${t.fotos[0]}" class="card-img-top">
+          <div class="card-body">
+            <h3 class="fs-5">
+              <a href="javascript:void(0);" class="link-secondary" data-bs-toggle="modal" data-bs-target="#ModalTrabajos" data-portafolio="${i}">${t.nombre}</a>
+            </h3>
+            <p>${t.abstract}</p>
+            <small>#${t.soporte}</small>
+          </div>
+      </div></article>`;
+    });
+    document.querySelectorAll('[data-bs-toggle="modal"]').forEach((element) => {
+      element.addEventListener("click", (event) => {
+        const InformacionAdicional = parseInt(event.target.getAttribute("data-portafolio"));
+        InfoanexaTrabajos(InformacionAdicional);
+      });
+    });
+  }
+  portfolio().catch((error) => console.error(error));
+  function InfoanexaTrabajos(InformacionAdicional) {
+    fetch("https://raw.githubusercontent.com/MjoseGaete/DNM_clase12/main/Portafolio.json")
+      .then((response) => response.json())
+      .then((data) => {
+        const trabajo = data[InformacionAdicional];
+        const modalContent = document.getElementById("ExpansionTrabajos");
+        modalContent.innerHTML = `
+          <h2 class="fs-1">${trabajo.nombre}</h2>
+          <p>${trabajo.texto}</p>
+          <small>#${trabajo.soporte}</small>
+          <div class="row">
+            ${trabajo.fotos
+              .map((foto) => `<div class="col"><img src="${foto}" class="w-100 rounded shadow-sm"></div>`)
+              .join("")}
+          </div>
+        `;
+        $('#ModalTrabajos').modal('show');
+      })
+      .catch((error) => console.error(error));
+  }
+</script>
+        <!-- Lo que sigue es la biblioteca de Bootstrap-->
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    </body>
+</html>
