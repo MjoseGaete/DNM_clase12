@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario Árbol de Decisiones</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; }
+        .pregunta { margin-bottom: 20px; border: 1px solid #ccc; padding: 15px; border-radius: 5px; }
+        .opcion { display: block; margin-bottom: 10px; }
+        button { padding: 10px 15px; cursor: pointer; margin-top: 10px; }
+        #resultado { margin-top: 20px; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <h1>Cuestionario para Video Promocional</h1>
+
+    <div id="cuestionario">
+    </div>
+
+    <div id="resultado" style="display: none;">
+        Gracias por completar el cuestionario. Sus respuestas han sido registradas.
+    </div>
+
+    <script>
+        const cuestionarioDiv = document.getElementById('cuestionario');
+        const resultadoDiv = document.getElementById('resultado');
+        let respuestas = {};
+        let preguntaActual = 'inicio';
+
+        const preguntasConfig = {
+            'inicio': {
+                pregunta: "¿Qué servicio le gustaría solicitar?",
+                tipo: "opcion_unica",
+                opciones: [
+                    { texto: "Servicio 1", siguiente: "servicio1_preg1" },
+                    { texto: "Servicio 2", siguiente: "servicio2_preg1" },
+                    { texto: "Servicio 3", siguiente: "servicio3_preg1" },
+                    { texto: "Otro servicio", siguiente: "otro_servicio_especificar" }
+                ]
+            },
+            'otro_servicio_especificar': {
+                pregunta: "Por favor, especifique qué otro servicio le interesa:",
+                tipo: "abierta",
+                siguiente: "objetivo_video"
+            },
+            'servicio1_preg1': {
+                pregunta: "Pregunta específica para el Servicio 1.",
+                tipo: "opcion_unica",
+                opciones: [
+                    { texto: "Opción A (Servicio 1)", siguiente: "objetivo_video" },
+                    { texto: "Opción B (Servicio 1)", siguiente: "objetivo_video" }
+                ]
+            },
+            'servicio2_preg1': {
+                pregunta: "Pregunta específica para el Servicio 2.",
+                tipo: "opcion_unica",
+                opciones: [
+                    { texto: "Opción X (Servicio 2)", siguiente: "objetivo_video" },
+                    { texto: "Opción Y (Servicio 2)", siguiente: "objetivo_video" }
+                ]
+            },
+            'servicio3_preg1': {
+                pregunta: "Pregunta específica para el Servicio 3.",
+                tipo: "opcion_unica",
+                opciones: [
+                    { texto: "Opción 1 (Servicio 3)", siguiente: "objetivo_video" },
+                    { texto: "Opción 2 (Servicio 3)", siguiente: "objetivo_video" }
+                ]
+            },
+            'objetivo_video': {
+                pregunta: "¿Cuál es el objetivo principal que tiene al crear su video?",
+                tipo: "opcion_unica",
+                opciones: [
+                    { texto: "Publicitar un producto", siguiente: "tipo_negocio" },
+                    { texto: "Ofrecer un servicio", siguiente: "tipo_negocio" },
+                    { texto: "Anunciar un evento", siguiente: "uso_video" },
+                    { texto: "Publicitar una obra artística", siguiente: "uso_video" },
+                    { texto: "Dar a conocer una empresa/organización", siguiente: "uso_video" },
+                    { texto: "Presentar un proyecto (apoyo)", siguiente: "uso_video" },
+                    { texto: "Explicar proyecto (fondo/financiamiento)", siguiente: "uso_video" },
+                    { texto: "Introducir una marca", siguiente: "uso_video" },
+                    { texto: "Promocionar una marca conocida", siguiente: "uso_video" }
+                ]
+            },
+            'tipo_negocio': {
+                pregunta: "¿Qué tipo de negocio o iniciativa tiene y quiere anunciar?",
+                tipo: "opcion_unica",
+                opciones: [
+                    { texto: "Ofrece un servicio por cuenta propia", siguiente: "uso_video" },
+                    { texto: "Es un/a emprendedor/a que vende productos", siguiente: "uso_video" },
+                    { texto: "Tiene una micro, pequeña o mediana empresa", siguiente: "uso_video" },
+                    { texto: "Ejerce una actividad artística o cultural", siguiente: "uso_video" },
+                    { texto: "Pertenece a una organización sin fines de lucro", siguiente: "uso_video" }
+                ]
+            },
+            'uso_video': {
+                pregunta: "¿Cómo piensa utilizar el video que va a crear?",
+                tipo: "opcion_unica",
+                opciones: [
+                    { texto: "Subir el link a sus redes sociales", siguiente: "interes_mas_videos" },
+                    { texto: "Enviar el link por correo a sus clientes", siguiente: "interes_mas_videos" },
+                    { texto: "Pagar para publicidad en redes sociales", siguiente: "interes_mas_videos" },
+                    { texto: "Pagar para publicidad en Google", siguiente: "interes_mas_videos" },
+                    { texto: "Campaña publicitaria con varios videos", siguiente: "interes_mas_videos" }
+                ]
+            },
+            'interes_mas_videos': {
+                pregunta: "¿Está interesado/a en crear más de un video para su campaña?",
+                tipo: "opcion_unica",
+                opciones: [
+                    { texto: "Sí", siguiente: "tipo_negocio_detalle" },
+                    { texto: "No", siguiente: "final" },
+                    { texto: "Tal vez", siguiente: "tipo_negocio_detalle" }
+                ]
+            },
+            'tipo_negocio_detalle': {
+                pregunta: "Para guiarlo mejor, ¿a qué se dedica principalmente su negocio/iniciativa?",
+                tipo: "opcion_unica",
+                opciones: [
+                    { texto: "Venta de servicios en un área específica", siguiente: "final" },
+                    { texto: "Venta de productos fabricados por usted", siguiente: "final" },
+                    { texto: "Actividades artísticas o culturales", siguiente: "final" },
+                    { texto: "Otro", siguiente: "final" }
+                ]
+            },
+            'final': {
+                pregunta: "¡Gracias por responder!",
+                tipo: "final"
+            }
+        };
+
+        function mostrarPregunta(preguntaId) {
+            cuestionarioDiv.innerHTML = '';
+            const preguntaData = preguntasConfig[preguntaId];
+
+            if (!preguntaData) {
+                cuestionarioDiv.innerHTML = '<p>Error: Pregunta no encontrada.</p>';
+                return;
+            }
+
+            const preguntaDiv = document.createElement('div');
+            preguntaDiv.classList.add('pregunta');
+            preguntaDiv.innerHTML = `<h3>${preguntaData.pregunta}</h3>`;
+
+            if (preguntaData.tipo === 'opcion_unica') {
+                preguntaData.opciones.forEach(opcion => {
+                    const radio = document.createElement('input');
+                    radio.type = 'radio';
+                    radio.name = 'respuesta';
+                    radio.value = opcion.texto;
+                    const label = document.createElement('label');
+                    label.textContent = opcion.texto;
+                    const divOpcion = document.createElement('div');
+                    divOpcion.classList.add('opcion');
+                    divOpcion.appendChild(radio);
+                    divOpcion.appendChild(label);
+                    preguntaDiv.appendChild(divOpcion);
+                });
+                const botonSiguiente = document.createElement('button');
+                botonSiguiente.textContent = 'Siguiente';
+                botonSiguiente.addEventListener('click', () => {
+                    const respuestaSeleccionada = document.querySelector('input[name="respuesta"]:checked');
+                    if (respuestaSeleccionada) {
+                        respuestas[preguntaId] = respuestaSeleccionada.value;
+                        const siguientePreguntaId = preguntaData.opciones.find(op => op.texto === respuestaSeleccionada.value)?.siguiente;
+                        if (siguientePreguntaId) {
+                            preguntaActual = siguientePreguntaId;
+                            mostrarPregunta(preguntaActual);
+                        } else if (preguntaId === 'final') {
+                            mostrarResultado();
+                        }
+                    } else {
+                        alert('Por favor, seleccione una opción.');
+                    }
+                });
+                preguntaDiv.appendChild(botonSiguiente);
+            } else if (preguntaData.tipo === 'abierta') {
+                const inputAbierto = document.createElement('input');
+                inputAbierto.type = 'text';
+                inputAbierto.id = 'respuesta-abierta';
+                inputAbierto.style.width = '100%';
+                inputAbierto.style.padding = '8px';
+                inputAbierto.style.marginBottom = '10px';
+                preguntaDiv.appendChild(inputAbierto);
+                const botonSiguiente = document.createElement('button');
+                botonSiguiente.textContent = 'Siguiente';
+                botonSiguiente.addEventListener('click', () => {
+                    const respuestaTexto = document.getElementById('respuesta-abierta').value.trim();
+                    if (respuestaTexto) {
+                        respuestas[preguntaId] = respuestaTexto;
+                        preguntaActual = preguntaData.siguiente;
+                        mostrarPregunta(preguntaActual);
+                    } else {
+                        alert('Por favor, ingrese su respuesta.');
+                    }
+                });
+                preguntaDiv.appendChild(botonSiguiente);
+            } else if (preguntaData.tipo === 'final') {
+                mostrarResultado();
+            }
+
+            cuestionarioDiv.appendChild(preguntaDiv);
+        }
+
+        function mostrarResultado() {
+            cuestionarioDiv.style.display = 'none';
+            resultadoDiv.style.display = 'block';
+            console.log("Respuestas:", respuestas);
+            // Aquí iría la lógica para procesar las respuestas y generar el borrador del guion
+        }
+
+        // Iniciar el cuestionario
+        mostrarPregunta(preguntaActual);
+    </script>
+
+</body>
+</html>
